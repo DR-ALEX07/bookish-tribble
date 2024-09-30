@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Рекламные объявления</h1>
+        <nav>
+            <a href="/">Главная</a>
+            <a href="/education">Обучение</a>
+        </nav>
+    </header>
+
+    <div class="content">
+        <h2>Наши партнеры</h2>
+        <div class="ad-container">
+            <% ads.forEach(ad => { %>
+                <div class="ad">
+                    <a href="<%= ad.link %>" target="_blank">
+                        <img src="<%= ad.imageUrl %>" alt="<%= ad.title %>">
+                    </a>
+                    <p><%= ad.title %></p>
+                </div>
+            <% }); %>
+        </div>
+
+        <h3>Добавить новое рекламное объявление</h3>
+        <form action="/ads" method="POST">
+            <input type="text" name="title" placeholder="Заголовок" required>
+            <input type="text" name="link" placeholder="Ссылка" required>
+            <input type="text" name="imageUrl" placeholder="URL изображения" required>
+            <button type="submit">Добавить</button>
+        </form>
+    </div>
+    
+    <footer>
+        <p>&copy; 2024 Рекламка. Все права защищены.</p>
+    </footer>
+</body>
+</html>

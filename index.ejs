@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Нейросеть - Размещение рекламных блоков и полезные функции нейронных сетей">
+  <meta name="keywords" content="нейросеть, реклама, рекламные блоки, функции нейросети, ИИ">
+  <title>Нейросеть - Размещение рекламы и функции ИИ</title>
+  <link rel="stylesheet" href="/css/styles.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f3f7f0;
+    }
+    header {
+      background-color: #3a6e3a;
+      padding: 20px;
+      text-align: center;
+      color: #fff;
+    }
+    nav ul {
+      list-style: none;
+      padding: 0;
+    }
+    nav ul li {
+      display: inline;
+      margin: 0 15px;
+    }
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    main {
+      padding: 40px 20px;
+      background-color: #ffffff;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .ads {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .ad {
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      padding: 20px;
+      background-color: #ffffff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 30%;
+    }
+    .ad h3 {
+      margin-top: 0;
+      font-size: 1.2em;
+      color: #3a6e3a;
+    }
+    .ad p {
+      margin: 10px 0;
+    }
+    .ad a {
+      text-decoration: none;
+      color: #3a6e3a;
+      font-weight: bold;
+    }
+    footer {
+      background-color: #3a6e3a;
+      padding: 20px;
+      text-align: center;
+      color: #fff;
+      position: absolute;
+      width: 100%;
+      bottom: 0;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Нейросеть</h1>
+      <nav>
+        <ul>
+          <li><a href="/">Главная</a></li>
+          <li><a href="/about">О нас</a></li>
+          <li><a href="/contact">Контакты</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <h2>Размещение рекламы</h2>
+      <p>Используйте нашу платформу для размещения рекламных блоков, а также изучите полезные функции нейронных сетей. Вы можете разместить текстовую, графическую или видео рекламу.</p>
+      
+      <h2>Наши рекламные блоки</h2>
+      <div class="ads">
+        <% ads.forEach(ad => { %>
+          <div class="ad">
+            <h3><%= ad.title %></h3>
+            <p><%= ad.description %></p>
+            <a href="<%= ad.link %>" target="_blank">Перейти</a>
+          </div>
+        <% }); %>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© 2024 Нейросеть. Все права защищены. Свяжитесь с нами для размещения рекламы и получения дополнительной информации.</p>
+    </div>
+  </footer>
+</body>
+</html>

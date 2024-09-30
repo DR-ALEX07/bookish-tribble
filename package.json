@@ -1,0 +1,16 @@
+{
+  "name": "reklamka",
+  "version": "1.0.0",
+  "description": "Сайт для размещения рекламы и образовательных материалов",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "ejs": "^3.1.10",
+    "express": "^4.21.0",
+    "mongoose": "^8.7.0",
+    "nodemon": "^2.0.22"
+  }
+}
